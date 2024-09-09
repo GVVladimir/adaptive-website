@@ -12,6 +12,7 @@ body {
   background-color: black;
   font-family: Playfair Display;
   font-family: Poppins;
+  /* overflow-x: hidden; */
 }
 
 li {
@@ -35,7 +36,7 @@ a {
 
 .container {
   max-width: 1920px;
-  height: 1960px;
+  min-height: 1960px;
   margin: 0 auto;
 }
 
@@ -54,6 +55,15 @@ nav {
   line-height: 25.5px;
   text-align: left;
   width: 80%;
+}
+
+.burger {
+  display: none;
+}
+
+.neader_burger {
+  width: 40px;
+
 }
 
 ul {
@@ -111,6 +121,7 @@ ol {
   line-height: 27px;
   text-align: left;
   padding: 35px;
+  min-width: 100px;
 }
 
 .start {
@@ -167,7 +178,7 @@ main {
 
 .main-h {
   max-width: 540px;
-  height: 170px;
+  /* overflow-x: hidden; */
   font-family: "Playfair Display";
   font-weight: 600;
   font-size: 64px;
@@ -212,6 +223,16 @@ main {
   gap: 20px;
 } */
 
+footer {
+  margin: 0 auto;
+  margin-top: 200px;
+  max-width: 1478px;
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+}
+
 .section-footer_a {
   margin-top: 25px;
   color: #fbd784;
@@ -219,16 +240,6 @@ main {
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
-}
-
-footer {
-  margin: 0 auto;
-  margin-top: 350px;
-  max-width: 1478px;
-  height: 280px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 200px;
 }
 
 .footer-h {
@@ -301,3 +312,32 @@ small {
 }
 
 /* адаптив */
+
+@media (max-width: 1433px) {
+  h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1357px) {
+  h1 {
+    font-size: 75px;
+  }
+}
+
+@media (max-width: 1310px) {
+  h1 {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  ul {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+    justify-content: space-between;
+  }
+}
