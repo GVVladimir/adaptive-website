@@ -9,7 +9,7 @@
 body {
   margin: 0 auto;
   max-width: 1920px;
-  background-color: black;
+  background: rgba(0, 0, 0, 0.899);
   font-family: Playfair Display;
   font-family: Poppins;
   /* overflow-x: hidden; */
@@ -42,6 +42,7 @@ a {
 
 header {
   background-image: url(img/header/обои.png);
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +64,6 @@ nav {
 
 .neader_burger {
   width: 40px;
-
 }
 
 ul {
@@ -97,7 +97,7 @@ ol {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
-  gap: 90px;
+  gap: 10%;
 }
 
 .head-fol {
@@ -124,10 +124,6 @@ ol {
   min-width: 100px;
 }
 
-.start {
-  margin-right: 0px;
-}
-
 .header {
   max-width: 950px;
   height: 419px;
@@ -135,13 +131,14 @@ ol {
 }
 
 h1 {
-  max-width: 950px;
-  height: 419px;
+ 
+  
   font-family: Playfair Display;
   font-size: 88px;
   font-weight: 600;
   line-height: 100px;
   text-align: left;
+  margin-bottom: 150px;
 }
 
 .header-p {
@@ -170,15 +167,33 @@ main {
 .main {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-bottom: 50px;
-  height: 720px;
+  min-height: 720px;
   color: #ffffff;
-  gap: 70px;
 }
+
+.main_block {
+  display: none;
+ 
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  min-height: 720px;
+  color: #ffffff;
+}
+
+.main_block .main-h {
+text-align: right;
+}
+
+.main_block .main-text_text {
+  text-align: right;
+  }
 
 .main-h {
   max-width: 540px;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   font-family: "Playfair Display";
   font-weight: 600;
   font-size: 64px;
@@ -204,7 +219,7 @@ main {
 }
 
 .main-foto {
-  min-width: 566px;
+  width: 566px;
   margin-right: -55px;
 }
 
@@ -246,7 +261,7 @@ footer {
   max-width: 280px;
   margin: 0;
   color: #ffffff;
-  max-width: 365px;
+ 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -280,7 +295,7 @@ small {
 }
 .footer_links {
   display: flex;
-  width: 566px;
+  max-width: 566px;
   align-content: space-around;
   gap: 100px;
 }
@@ -312,6 +327,17 @@ small {
 }
 
 /* адаптив */
+@media (max-width: 1504px) {
+  .main {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1444px) {
+  .main-foto {
+    width: 468px;
+  }
+}
 
 @media (max-width: 1433px) {
   h1 {
@@ -325,19 +351,84 @@ small {
   }
 }
 
+@media (max-width: 1314px) {
+
+  .text{
+    margin-left: 0;
+  }
+
+  .main_block .text{
+    margin-left: 300px;
+  }
+  .block {
+    display: none;
+  }
+
+  .main_block {
+    display: flex;
+  }
+  .main-text {
+    width: 860px;
+    margin-bottom: 50px;
+  }
+
+  .main-foto {
+    width: 860px;
+  }
+}
+
 @media (max-width: 1310px) {
   h1 {
     font-size: 70px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1264px) {
+  h1 {
+    font-size: 55px;
+    font-weight: 600;
+  }
+
+
+}
+
+@media (max-width: 1055px) {
+  .main-foto {
+    max-width: 704px;
+  }
+
+  h1 {
+    font-size: 44px;
+    
+  }
+
+  .footer_links{
+    gap: 20px;
+  }
+
+  .footer-link a{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1005px){
+  h1{
+
+  }
+}
+
+@media (max-width: 845px) {
   ul {
     display: none;
   }
-
   .burger {
     display: flex;
     justify-content: space-between;
+  }
+
+  .h1 {
+    font-size: 44px;
+    line-height: 100;
+    font-weight: 600;
   }
 }
