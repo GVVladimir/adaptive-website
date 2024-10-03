@@ -35,16 +35,23 @@ a {
 }
 
 .container {
-  max-width: 1920px;
-  min-height: 1960px;
   margin: 0 auto;
+  max-width: 1920px;
+  height: 1960px;
 }
 
 header {
-  background-image: url(img/header/обои.png);
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  background-image: url(img/header/обои.png);
+  width: 100%;
+  block-size: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 nav {
@@ -60,13 +67,46 @@ nav {
 
 .burger {
   display: none;
+  justify-content: space-between;
+}
+
+.menuBurger {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  height: 265px;
+  background-color: #ffffff;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.menuBurger div {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 64px;
+}
+
+.menuBurger a {
+  color: black;
+}
+
+.black {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+
+  width: 80%;
 }
 
 .neader_burger {
   width: 40px;
 }
 
-ul {
+.header-ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,6 +114,10 @@ ul {
   color: #ffffff;
   font-size: 18px;
   height: 37px;
+}
+
+.black {
+  color: #354147;
 }
 
 ol {
@@ -96,8 +140,6 @@ ol {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
-  gap: 10%;
 }
 
 .head-fol {
@@ -108,8 +150,8 @@ ol {
 }
 
 .head-fol img {
-  width: 24px;
-  height: 24px;
+  max-width: 24px;
+  max-height: 24px;
 }
 
 .head_follow {
@@ -126,18 +168,16 @@ ol {
 
 .header {
   max-width: 950px;
-  height: 419px;
+  max-height: 419px;
   color: #ffffff;
 }
 
 h1 {
- 
-  
   font-family: Playfair Display;
   font-size: 88px;
   font-weight: 600;
   line-height: 100px;
-  text-align: left;
+
   margin-bottom: 150px;
 }
 
@@ -146,7 +186,6 @@ h1 {
 }
 
 .header-footer {
-  position: absolute;
   margin-top: -86px;
   font-family: Poppins;
   font-size: 18px;
@@ -168,6 +207,16 @@ main {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+
+  margin-bottom: 50px;
+  min-height: 720px;
+  color: #ffffff;
+}
+
+.block {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-bottom: 50px;
   min-height: 720px;
   color: #ffffff;
@@ -175,7 +224,6 @@ main {
 
 .main_block {
   display: none;
- 
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-bottom: 50px;
@@ -184,12 +232,12 @@ main {
 }
 
 .main_block .main-h {
-text-align: right;
+  text-align: right;
 }
 
 .main_block .main-text_text {
   text-align: right;
-  }
+}
 
 .main-h {
   max-width: 540px;
@@ -213,14 +261,14 @@ text-align: right;
   max-width: 620px;
 }
 
-.text {
+.block .text {
   margin-top: -150px;
-  margin-left: 140px;
+  margin-left: 0px;
 }
 
 .main-foto {
   width: 566px;
-  margin-right: -55px;
+  /* margin-right: -55px; */
 }
 
 .number {
@@ -231,20 +279,23 @@ text-align: right;
   z-index: -1;
 }
 
-/* div {
-  
-  width: 632px;
-  height: 465px;
-  gap: 20px;
-} */
+.twoBlock {
+  display: none;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  min-height: 720px;
+  color: #ffffff;
+}
+/* подвал */
 
 footer {
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   margin-top: 200px;
   max-width: 1478px;
   height: 280px;
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 200px;
 }
 
@@ -259,13 +310,12 @@ footer {
 
 .footer-h {
   max-width: 280px;
-  margin: 0;
   color: #ffffff;
- 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .footer-h h3 {
   font-family: Playfair Display;
   font-size: 32px;
@@ -275,29 +325,32 @@ footer {
   text-align: left;
 }
 
-.footer-h p {
+.footer-p {
   margin-top: 25px;
   font-family: Poppins;
   font-size: 18px;
   font-weight: 600;
   line-height: 32px;
   text-align: left;
+  border: 2px solid red;
 }
 
 small {
-  width: 376px;
+  width: 446px;
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
   text-align: left;
   opacity: 0.5;
+  z-index: 1;
 }
 .footer_links {
   display: flex;
   max-width: 566px;
   align-content: space-around;
-  gap: 100px;
+
+  border: 2px solid greenyellow;
 }
 
 .footer-link {
@@ -327,10 +380,16 @@ small {
 }
 
 /* адаптив */
-@media (max-width: 1504px) {
-  .main {
-    gap: 10px;
+@media (max-width: 1528px) {
+  .footer-h {
+    margin-left: 20px;
   }
+}
+
+@media (max-width: 1504px) {
+  /* .main {
+    gap: 20px;
+  } */
 }
 
 @media (max-width: 1444px) {
@@ -352,28 +411,21 @@ small {
 }
 
 @media (max-width: 1314px) {
-
-  .text{
+  .text {
     margin-left: 0;
   }
 
-  .main_block .text{
+  .main_block .text {
     margin-left: 300px;
   }
-  .block {
-    display: none;
-  }
 
-  .main_block {
-    display: flex;
-  }
   .main-text {
-    width: 860px;
+    max-width: 860px;
     margin-bottom: 50px;
   }
 
   .main-foto {
-    width: 860px;
+    max-width: 860px;
   }
 }
 
@@ -389,46 +441,98 @@ small {
     font-weight: 600;
   }
 
+  .block {
+    gap: 7%;
+  }
+  .main {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
 
+@media (max-width: 1147px) {
+  .block {
+    display: none;
+  }
+
+  .twoBlock {
+    display: flex;
+  }
+
+  .text {
+    margin-top: -120px;
+    width: 100%;
+  }
+
+  .main-text {
+    margin-top: -120px;
+  }
+
+  .main-foto {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1055px) {
-  .main-foto {
-    max-width: 704px;
+  .footer_links {
+    gap: 20px;
+  }
+
+  .footer-link a {
+    font-size: 16px;
+  }
+
+  .black {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-ul {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+    justify-content: space-around;
   }
 
   h1 {
     font-size: 44px;
-    
+    font-weight: 600;
+    line-height: 85px;
+  }
+}
+
+@media (max-width: 740px) {
+  h1 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 75px;
   }
 
-  .footer_links{
-    gap: 20px;
+  .head_follow {
+    font-size: 18px;
   }
 
-  .footer-link a{
+  .srart {
+    width: 68px;
+    height: 240px;
+  }
+
+  .footer-p {
+    font-size: 16px;
+  }
+
+  .footer-link a {
     font-size: 16px;
   }
 }
 
-@media (max-width: 1005px){
-  h1{
-
-  }
-}
-
-@media (max-width: 845px) {
-  ul {
-    display: none;
-  }
-  .burger {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .h1 {
-    font-size: 44px;
-    line-height: 100;
-    font-weight: 600;
+@media (max-width: 650px) {
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 55px;
   }
 }
